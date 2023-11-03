@@ -72,30 +72,85 @@ a:hover {
     background-color: rgb(105, 255, 138);
 }
 
-#gnb>li {
+#gnb>li>a {
+    font-size: 22px;
     background-color: aquamarine;
     padding: 0.3rem 2rem;
+    display: block;
 }
 
 .d2ul {
-    background-color: aquamarine;
+    background-color: transparent;
+    /* 투명!하게 해서 가려준다 그리고 호버하면 색깔이 생기게.. */
     top: 100%;
     left: 0;
     right: 0;
     max-height: 0;
     overflow: hidden;
     transition: 0.5s;
+    border: 1px solid transparent;
 }
 
-.d2li {
-    padding: 0.3rem 2rem;
+.d2li>a {
+    /* padding: 0.3rem 2rem; */
     /* 패딩은 리스트에 줘야함.. ul에 주면.. 망함... */
+    text-indent: 2rem;
+    line-height: 2;
+    font-size: 22px;
+    display: block;
+
 }
 
 #gnb>li:hover .d2ul {
-    max-height: 500%;
+    max-height: 700%;
+    border: 1px solid #333;
+    background-color: aquamarine;
 }
 
+#gnb>li a:hover,
 .d2li:hover {
-    background-color: rgb(105, 255, 138);
+    background-color: rgb(5, 175, 118);
+}
+
+#threeBanner>* {
+    width: 33.333%;
+}
+
+#threeBanner .tabs {
+    background-color: rgb(148, 255, 148);
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1.5rem;
+}
+
+#threeBanner .tabs .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+.tabs2 {
+    background-color: greenyellow;
+}
+
+.tabs3 {
+    background-color: green;
+}
+
+#fd {
+    background-color: rgb(25, 54, 25);
+}
+
+#fd .footerMeue {
+    flex-direction: column;
+    height: 50px;
+}
+
+#fd .footerMeue ul li {
+    padding: 0 1rem;
+    color: white;
+}
+
+#fd .footerMeue p {
+    color: white;
 }
