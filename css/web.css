@@ -8,6 +8,11 @@ li {
     list-style: none;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
 a:hover {
     color: red;
 }
@@ -59,4 +64,38 @@ a:hover {
 .container {
     width: 1200px;
     margin: 0 auto;
+}
+
+/* layout */
+
+#hd {
+    background-color: rgb(105, 255, 138);
+}
+
+#gnb>li {
+    background-color: aquamarine;
+    padding: 0.3rem 2rem;
+}
+
+.d2ul {
+    background-color: aquamarine;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.d2li {
+    padding: 0.3rem 2rem;
+    /* 패딩은 리스트에 줘야함.. ul에 주면.. 망함... */
+}
+
+#gnb>li:hover .d2ul {
+    max-height: 500%;
+}
+
+.d2li:hover {
+    background-color: rgb(105, 255, 138);
 }
